@@ -6,7 +6,11 @@
         <a :class="mode" @click.stop="showItemsHandler(mode)" :key="index">
           {{ mode === 'month' ? current[mode] + 1 : current[mode] }}
         </a>
-        {{index < modeIndex ? (index <= 1 ? '-' : index === 2 ? ' ' : index <= 4 ? ':' : '') : ''}}
+        <span v-if="index < modeIndex">
+          <span v-if="index <= 1">-</span>
+          <span v-else-if="index === 2"> </span>
+          <span v-else-if="index <= 4">:</span>
+        </span>
       </template>
       <!--<a class="reset" @click.stop="todayHandler" v-html="today" v-if="mode === 'day'"></a>-->
       <a :class="['next', {'disabled': state === 'year'}]" @click.stop="pageHandler(1)"><i class="fa fa-chevron-right"></i></a>
