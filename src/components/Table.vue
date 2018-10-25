@@ -4,14 +4,14 @@
       <div :class="['fish dimmer loading', {'active': loading}]"></div>
       <div class="header" ref="header">
         <fish-table-head :columns="allLeafColumns" :rows="rows" :scroll-y="scrollY"
-                         :expandedRowRender="fixedLeftColumns.length <= 0 && fixedRightColumns.length <= 0 && expandedRowRender || undefined"
+                         :expanded-row-render="fixedLeftColumns.length <= 0 && fixedRightColumns.length <= 0 && expandedRowRender || undefined"
                          @select="headSelectHandler"
                          @sort-change="sortChangeHandler"
                          @filter-change="filterChangeHandler" ref="vth"></fish-table-head>
       </div>
       <div class="body" ref="body">
         <fish-table-body :columns="allLeafColumns" :rows="data" :scroll-y="scrollY" :no-more-text="noMoreText"
-                        :expandedRowRender="fixedLeftColumns.length <= 0 && fixedRightColumns.length <= 0 && expandedRowRender || undefined"
+                        :expanded-row-render="fixedLeftColumns.length <= 0 && fixedRightColumns.length <= 0 && expandedRowRender || undefined"
                         @select="bodySelectHandler" ref="vtb"></fish-table-body>
       </div>
       <!-- fixed column -->
