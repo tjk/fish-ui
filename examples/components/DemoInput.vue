@@ -110,7 +110,8 @@
           ['size', 'optional: <code>mini</code>, <code>tiny</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>big</code>, <code>huge</code>, <code>massive</code>', 'String', '-'],
           ['transparent', 'Whether the input is transparent.', 'Boolean', 'false'],
           ['disabled', 'Whether the input is disabled.', 'Boolean', 'false'],
-          ['clear', 'Whether the input is cleared', 'Boolean', 'false']
+          ['clear', 'Whether the input is cleared', 'Boolean', 'false'],
+          ['readonly', 'Whether the input is readonly', 'Boolean', 'false']
         ]
       }
     }
